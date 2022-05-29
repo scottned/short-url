@@ -7,6 +7,12 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import styles from "./tailwind.css";
+
+export const links = () => [
+  { rel: "stylesheet", href: styles },
+];
+
 export const meta = () => ({
   charset: "utf-8",
   title: "URL Shortener",
@@ -20,7 +26,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-slate-600 m-4">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
